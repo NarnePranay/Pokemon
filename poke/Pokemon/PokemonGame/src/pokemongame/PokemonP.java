@@ -5,6 +5,8 @@
  */
 package pokemongame;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Half_BlooD PrincE
@@ -115,9 +117,12 @@ moves[3][4]= "physical";
 }
 class FeraligatrP extends PokemonP
 {
+    static ArrayList<Attacks> attacks=new ArrayList<Attacks>();
 FeraligatrP()
 {
+    
 super(374,339,328,282,291,280,"water","null");
+attacks.add(new Attacks("Hydro Pump",120,water));
 moves[0][0]= "Hydro Pump";
 moves[0][1]= "120";
 moves[0][2]= "75";
@@ -142,28 +147,47 @@ moves[3][4]= "physical";
 }
 class TyphlosionP extends PokemonP
 {
+    static ArrayList<Attacks> attacks=new ArrayList<Attacks>();
 TyphlosionP()
 {
 super(360,293,280,348,295,328,"fire","null");
-moves[0][0]= "Fire Blast";
-moves[0][1]= "5000";
-moves[0][2]= "75";
-moves[0][3]= "fire";
-moves[0][4]= "special";
-moves[1][0]= "Body Slam";
+
+attacks.add(new Attacks("Body Slam",80,"normal",30));
+/*moves[1][0]= "Body Slam";
 moves[1][1]= "80";
 moves[1][2]= "100";
 moves[1][3]= "normal";
-moves[1][4]= "physical";
-moves[2][0]= "Brick Break";
+moves[1][4]= "physical";*/
+attacks.add(new Attacks("Brick Break",75,"normal",26));
+/*moves[2][0]= "Brick Break";
 moves[2][1]= "75";
 moves[2][2]= "100";
 moves[2][3]= "fighting";
-moves[2][4]= "physical";
-moves[3][0]= "Fire Punch";
+moves[2][4]= "physical";*/
+attacks.add(new Attacks("Fire Punch",75,"fire",26));
+/*moves[3][0]= "Fire Punch";
 moves[3][1]= "75";
 moves[3][2]= "100";
 moves[3][3]= "fire";
-moves[3][4]= "physical";
+moves[3][4]= "physical";*/
+attacks.add(new Attacks("Fire Blast",500,"fire",40));
+/*moves[0][0]= "Fire Blast";
+moves[0][1]= "5000";
+moves[0][2]= "75";
+moves[0][3]= "fire";
+moves[0][4]= "special";*/
 }
+}
+
+class Attacks{
+    String name;
+    int damage;
+    String type;
+    int count;
+    public Attacks(String name,int damage,String type,int count){        
+        this.name=name;
+        this.damage=damage;
+        this.type=type;
+        this.count=count;
+    }
 }
