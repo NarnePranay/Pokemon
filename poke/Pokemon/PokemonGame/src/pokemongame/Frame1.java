@@ -275,7 +275,6 @@ public class Frame1 extends javax.swing.JFrame {
     int btnCount=1;
     BackEnd b=new BackEnd();
     private void btn_blastoiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_blastoiseActionPerformed
-        // TODO add your handling code here:
         pokemon_select=2;
         this.setVisible(false);
         new Frame2(pokemon_select).setVisible(true);
