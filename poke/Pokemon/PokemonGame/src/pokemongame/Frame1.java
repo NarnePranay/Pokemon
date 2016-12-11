@@ -288,6 +288,7 @@ public class Frame1 extends javax.swing.JFrame {
         btnCount++;
         pl1.setVisible(false);
         pl2.setVisible(true);
+        
         }
         else if(btnCount==2){
             pokemon_select=0;
