@@ -22,19 +22,19 @@ public class BackEnd {
     /**
      * @param args the command line arguments
      */
-    static Pokemon p1,p2;
-    static ArrayList<Pokemon> pokemon =new ArrayList<>();
+    static PokemonP p1,p2;
+    static ArrayList<PokemonP> pokemon =new ArrayList<>();
     public BackEnd() {
         
-        pokemon.add(new Venasaur());
-        pokemon.add(new Charizad());
-        pokemon.add(new Blastoise());
-        pokemon.add(new Feraligatr());
-        pokemon.add(new Typhlosion());
-        pokemon.add(new Mewtwo());
+        pokemon.add(new VenasaurP());
+        pokemon.add(new CharizadP());
+        pokemon.add(new BlastoiseP());
+        pokemon.add(new FeraligatrP());
+        pokemon.add(new TyphlosionP());
+        /*pokemon.add(new MewtwoP());
         pokemon.add(new Swampert());
         pokemon.add(new Blaziken());
-        pokemon.add(new Sceptile());
+        pokemon.add(new Sceptile());*/
         }
     void selectPokemonP1(int x){
         p1=pokemon.get(x);
@@ -44,5 +44,11 @@ public class BackEnd {
     void selectPokemonP2(int x){
         p2=pokemon.get(x);
         
+    }
+    
+    void printMoves(){
+        for(int i=0;i<4;i++){
+            System.out.println(p1.attacks.get(i).name);
+        }
     }
 }
